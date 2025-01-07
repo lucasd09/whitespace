@@ -9,8 +9,8 @@ export const googleService = {
 
     return user;
   },
-  createGoogleUser: async ({ email, name, sub: googleId }: GoogleUser) => {
-    const createdUser = await create({ name, email, googleId });
+  createGoogleUser: async ({ email, name, sub: googleId, picture }: GoogleUser) => {
+    const createdUser = await create({ name, email, googleId, picture });
 
     return createdUser;
   },

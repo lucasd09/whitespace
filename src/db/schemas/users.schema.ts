@@ -7,6 +7,7 @@ export const usersTable = pgTable("users", {
   password: text(),
   googleId: text("google_id"),
   githubId: text("github_id"),
+  picture: text()
 });
 
 export const userId = () =>

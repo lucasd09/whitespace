@@ -15,6 +15,13 @@
       "when": 1736256552861,
       "tag": "0001_unknown_morlocks",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1736259653488,
+      "tag": "0002_amazing_hercules",
+      "breakpoints": true
     }
   ]
 }

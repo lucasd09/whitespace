@@ -11,7 +11,7 @@ export default function LandingPage() {
           href="#"
         >
           <Zap className="h-6 w-6 text-primary" />
-          <span className="sr-only">NextJS Template</span>
+          <span className="sr-only">Whitespace</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
@@ -40,15 +40,16 @@ export default function LandingPage() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Next.js Template with Auth & Components
+                  Deliver your story with Whitespace
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Jumpstart your Next.js projects with our powerful template.
-                  Built-in authentication, pre-styled components, and more!
+                  Write, schedule, send. It's simple as that. A newsletter mailer made for creators.
                 </p>
               </div>
               <div className="space-x-4">
-                <Button size="lg">Try it Out</Button>
+                <Link href='/sign-in'>
+                  <Button size="lg">Try it Out</Button>
+                </Link>
                 <Button
                   variant="outline"
                   size="lg"

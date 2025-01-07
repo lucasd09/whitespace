@@ -75,7 +75,7 @@ export async function GET(request: Request): Promise<Response> {
 
     if (emailAlreadyRegistered) {
       const { id } = emailAlreadyRegistered;
-      await userService.update(id, { googleId: googleUser.sub });
+      await userService.update(id, { googleId: googleUser.sub, picture: googleUser.picture});
       await setSession(id);
 
       return new Response(null, {

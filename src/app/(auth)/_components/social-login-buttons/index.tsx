@@ -19,20 +19,7 @@ export const SocialLoginButtons = () => {
 
   return (
     <>
-      <div className="w-full border-sky-600 dark:border-sky-400  bg-sky-400/20 dark:bg-sky-400/20 border rounded-md py-1 px-2 text-sm text-sky-600 dark:text-sky-400 mt-4">
-        Try it out! We'll pre-fill some example data to help you explore
-      </div>
-
       <div className="flex flex-col gap-4">
-        <Button
-          variant="outline"
-          className="gap-2"
-          onClick={handleRedirectGithub}
-        >
-          <Icon src={Github} />
-          Continue with GitHub
-        </Button>
-
         <Button
           variant="outline"
           className="gap-2"
@@ -40,6 +27,15 @@ export const SocialLoginButtons = () => {
         >
           <Icon src={Mail} />
           Continue with Google
+        </Button>
+
+        <Button
+          variant="outline"
+          className="gap-2"
+          onClick={handleRedirectGithub}
+        >
+          <Icon src={Github} />
+          Continue with GitHub
         </Button>
       </div>
 

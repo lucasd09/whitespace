@@ -1,5 +1,5 @@
 import { DashboardIcon } from "@radix-ui/react-icons";
-import { BarChart } from "lucide-react";
+import { Mail, PencilLine } from "lucide-react";
 import { Icon } from "./components/icon";
 import { Route } from "./lib/types";
 
@@ -9,9 +9,9 @@ export const appConfig = {
   redirectSignInURL: "/dashboard",
   brandName,
   logo: (
-    <div className="w-10 h-8 text-green-600 dark:text-green-400">
+    <div className="w-10 h-8">
       <Icon
-        src={BarChart}
+        src={Mail}
         className="size-full"
       />
     </div>
@@ -29,6 +29,11 @@ export const appConfig = {
       name: "Dashboard",
       path: "/dashboard",
       icon: DashboardIcon,
+    },
+    {
+      name: "Posts",
+      path: "/posts",
+      icon: PencilLine,
     },
   ] satisfies Route[],
 };
