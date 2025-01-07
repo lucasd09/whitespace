@@ -3,7 +3,7 @@ import { BarChart } from "lucide-react";
 import { Icon } from "./components/icon";
 import { Route } from "./lib/types";
 
-const brandName = "Next.js Template";
+const brandName = "Whitespace";
 
 export const appConfig = {
   redirectSignInURL: "/dashboard",
