@@ -1,8 +1,13 @@
 import Link from "next/link";
-import { CheckCircle, Code, Lock, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle, Code, Lock, Zap } from "lucide-react";
 import { Button } from "@/components/button";
+import { getSession } from "@/lib/session";
+import { Icon } from "@/components/icon";
+import { SlideIn } from "@/components/animations";
 
-export default function LandingPage() {
+export default async function LandingPage() {
+  const token = await getSession();
+
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <header className="px-4 lg:px-6 h-14 flex items-center border-b">
@@ -14,24 +19,32 @@ export default function LandingPage() {
           <span className="sr-only">Whitespace</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            className="text-sm font-medium hover:text-primary"
-            href="#features"
-          >
-            Features
-          </Link>
-          <Link
-            className="text-sm font-medium hover:text-primary"
-            href="#pricing"
-          >
-            Pricing
-          </Link>
-          <Link
-            className="text-sm font-medium hover:text-primary"
-            href="#faq"
-          >
-            FAQ
-          </Link>
+          {token ? (
+            <Link href="/dashboard">
+              <Button className="space-x-2">
+                <p>Go to Dashboard</p>
+                <Icon src={ArrowRight} />
+              </Button>
+            </Link>
+          ) : (
+            <div className="flex text-sm items-center gap-2">
+              <SlideIn direction="left">
+                <Link href="sign-in">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                  >
+                    Sign In
+                  </Button>
+                </Link>
+              </SlideIn>
+              <SlideIn direction="right">
+                <Link href="sign-up">
+                  <Button size="sm">Sign up</Button>
+                </Link>
+              </SlideIn>
+            </div>
+          )}
         </nav>
       </header>
       <main className="flex-1">

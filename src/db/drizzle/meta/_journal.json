@@ -22,6 +22,13 @@
       "when": 1736259653488,
       "tag": "0002_amazing_hercules",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1736358905535,
+      "tag": "0003_white_talon",
+      "breakpoints": true
     }
   ]
 }

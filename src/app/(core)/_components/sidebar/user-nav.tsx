@@ -6,6 +6,7 @@ import { checkUser } from "@/lib/session";
 import { UserCircle2 } from "lucide-react";
 import { ProfileSheet } from "../profile-sheet";
 import { SignOffDropdownItem } from "./sign-off-dropdown-item";
+import Image from "next/image";
 
 export const UserNav = async () => {
   const user = await checkUser();
@@ -39,7 +40,12 @@ export const UserNav = async () => {
           forceMount
           side="right"
         >
-          <DropdownMenu.Label className="font-normal">
+          <DropdownMenu.Label className="font-normal flex gap-2 items-center">
+            {user.picture ? <Image alt="user-img" src={user.picture} width={32} height={32} className="rounded-full" /> : <Icon
+              src={UserCircle2}
+              className="size-4"
+            />}
+
             <div className="flex flex-col space-y-1">
               <p className="text-sm font-medium leading-none">{user?.name}</p>
               <p className="text-xs leading-none text-muted-foreground">

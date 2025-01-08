@@ -26,3 +26,7 @@ export type Route = {
   path: string;
   icon: RouteIcon;
 };
+
+export type PageWithParams = {
+  params: Promise<{ slug: string }>;
+};

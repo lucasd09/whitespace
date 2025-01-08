@@ -11,7 +11,6 @@ export const ProfileSheet = async ({ user }: { user: UserAuth }) => {
           Manage your personal information here
         </Sheet.Description>
       </Sheet.Header>
-
       <ProfileSheetForm user={user} />
     </Sheet.Content>
   );
